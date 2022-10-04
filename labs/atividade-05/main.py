@@ -1,5 +1,5 @@
 def maximizar_troca_de_figurinhas(figurinhas_da_maria, figurinhas_da_joao): 
-    poggers = 0
+    gerador = 0
     menor = len(figurinhas_da_maria)
     menor2 = len(figurinhas_da_joao)
     if menor > menor2:
@@ -9,36 +9,36 @@ def maximizar_troca_de_figurinhas(figurinhas_da_maria, figurinhas_da_joao):
     for figurinha1 in figurinhas_da_maria:
         for figurinha2 in figurinhas_da_maria:
             if figurinha1 == figurinha2:
-                poggers += 1
-        if poggers != 1:
+                gerador += 1
+        if gerador != 1:
             figurinhas_da_maria.remove(figurinha1)
-        poggers = 0
+        gerador = 0
 
     for figurinha1 in figurinhas_da_joao:
         for figurinha2 in figurinhas_da_joao:
             if figurinha1 == figurinha2:
-                poggers += 1
-        if poggers != 1:
+                gerador += 1
+        if gerador != 1:
             figurinhas_da_joao.remove(figurinha1)
-        poggers = 0
+        gerador = 0
 
         if menor == menor2:
             for figurinha1 in figurinhas_da_joao:
                 for figurinha2 in figurinhas_da_maria:
                     if figurinha1 == figurinha2:
-                        poggers += 1
-                if poggers >= 1:
+                       gerador += 1
+                if gerador >= 1:
                     figurinhas_da_joao.remove(figurinha1)
-                poggers = 0
+                gerador = 0
             troca = len(figurinhas_da_joao)
         else:
             for figurinha1 in figurinhas_da_maria:
                 for figurinha2 in figurinhas_da_joao:
                     if figurinha1 == figurinha2:
-                        poggers += 1
-                if poggers >= 1:
+                        gerador += 1
+                if gerador >= 1:
                     figurinhas_da_maria.remove(figurinha1)
-                poggers = 0
+                gerador = 0
             troca = len(figurinhas_da_maria)
 
 
